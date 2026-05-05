@@ -56,7 +56,7 @@ def load_or_create_positions(name):
     obstacles = []
     sizes = [(60, 150), (150, 60), (100, 100), (80, 200), (200, 80), (120, 120)]
     
-    for i in range(8):
+    for i in range(12):
         while True:
             x = random.randint(-450, 450)
             y = random.randint(-280, 280)
@@ -421,7 +421,8 @@ while True:
         print("🎯 Reached B! RETURN TO A!")
         print(f"🟢 Теперь будут появляться препятствия!")
         going_forward = False
-        
+        hero.color('yellow')
+
         log.append({
             "event": "reached_goal_B",
             "x": hero.xcor(),
